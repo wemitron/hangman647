@@ -2,26 +2,39 @@
 import random
 
 class hangman:
+
     def __init__(self, word_list, num_lives=5):
+        """ Initialise the attributes of the hangman class.
+        
+        Parameters: 
+
+        word_list (lst) : list of words the computer can choose from.
+        word (str) : randomly selected word from  word_list.
+        word_guessed (lst) : placeholder list of the word to be guessed.
+        num_letters (int) : number of unique letters in the word.
+        list_of_guesses (lst) : list containing the player's guesses.
+        num_lives (int) : the player's number of lives.
+
+        
+        """
 
         self.word_list =  word_list
         self.word = random.choice(word_list)
         self.word_guessed = ["_"]*len(self.word)
-        print(self.word)
-        #print(self.word_guessed)
-        self.num_letters = len(set(self.word)) #sotres number of unique letters in word
+        print(self.word) #to delete before submission
+        self.num_letters = len(set(self.word)) 
         self.list_of_guesses = []
         self.num_lives = num_lives
     
     def check_guess(self,guess):
-        """Checks if user's guess is in the word and prints whether they are correct or not.
+        """Checks if player's guess is in the word and prints whether they are correct or not.
         
         Parameters: 
-        guess (str) : user's guess of letter in word
+
+        guess (str) : player's guess of a letter in the word.
         
         """
         guess = guess.lower()
-        #check if guess is in word
         if guess in self.word:
             print(f"Good guess! {guess} is in the word. ")
             letter = 0
@@ -36,9 +49,11 @@ class hangman:
             print(f"You have {self.num_lives} lives left.")
 
     def ask_for_input(self):
-        """Asks user to enter a guess and validates input is a single letter
+        """Asks player to enter a guess and validates input is a single letter.
+
         Returns:
-        guess (str) : user's guess of letter in word
+
+        guess (str) : player's guess of a letter in the word.
         """
         while True:
             guess = input("\nGuess a letter: ")         

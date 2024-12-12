@@ -7,7 +7,6 @@ word_list = ["mango", "kiwi", "banana", "peach", "cherry"]
 
 #generate random word from list
 word = random.choice(word_list)
-#print(word)
 
 guess = input("Please enter a single letter")
 # %%
