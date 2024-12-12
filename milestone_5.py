@@ -9,11 +9,14 @@ class hangman:
         Parameters: 
 
         word_list (lst) : list of words the computer can choose from.
+        num_lives (int) : the player's number of lives.
+
+        Attributes:
+
         word (str) : randomly selected word from  word_list.
         word_guessed (lst) : placeholder list of the word to be guessed.
         num_letters (int) : number of unique letters in the word.
         list_of_guesses (lst) : list containing the player's guesses.
-        num_lives (int) : the player's number of lives.
 
         
         """
@@ -67,6 +70,12 @@ class hangman:
                 break
     
 def play_game(word_list):
+    """Game initialised and script ends when winning or losing conditions are met.
+
+        Parameters:
+
+        word_list (lst) : list of words the computer can choose from.
+        """
     num_lives = 5
     game = hangman(word_list,num_lives)
     print(f"The word to guess is {game.word_guessed}")
