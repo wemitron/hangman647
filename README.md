@@ -6,9 +6,10 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 ## Getting Started
 ### Prerequisites
 Python.
-
+### Installation
+Download milestone_5.py in the main branch.
 ## Usage
-The user is asked to input a single letter at a time, they are given 5 lives to guess the correct word before they are "hanged".
+Run the file and the user is prompted to input a single letter, they are given 5 lives to guess the correct word before they are "hanged".
 
 ## License
 Licensed under The Unlicense.
